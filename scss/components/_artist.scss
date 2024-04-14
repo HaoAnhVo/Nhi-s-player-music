@@ -1,0 +1,57 @@
+@use "../abstracts";
+
+.artist {
+    margin-top: 64px;
+}
+
+.artist__title {
+    margin: 70px 0 15px;
+
+    @include abstracts.screen(lg) {
+        margin: 50px 0 10px;
+    }
+}
+
+.artist__item {
+    border-radius: 16px;
+    background: var(--Red, #fe476e);
+    padding: 20px 0;
+    cursor: pointer;
+    text-align: center;
+
+    @include abstracts.screen(lg) {
+        padding: 15px 0;
+    }
+}
+
+.artist__item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include abstracts.screen(lg) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.artist__item-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 140%;
+    margin: 16px 0 4px;
+    color: var(--text-color);
+    white-space: nowrap;
+
+    @include abstracts.screen(lg) {
+        font-size: 1.2rem;
+    }
+}
+
+.artist__item-description {
+    font-size: 1rem;
+    line-height: 140%;
+    color: var(--text-color);
+    opacity: 0.7;
+}

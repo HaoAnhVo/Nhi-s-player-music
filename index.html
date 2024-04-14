@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music App for Nhi</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="row row-cols-2 gx-0">
+            <div class="col-2 col-xl-1 d-sm-none">
+                <aside class="sidebar">
+                    <button
+                        class="aside__close-btn js-toggle d-none d-md-block"
+                        toggle-target="#aside"
+                    >
+                        <img src="./assets/icon/arrow-left.svg" alt="" />
+                    </button>
+                    <a href="/" class="sidebar__logo">
+                        <img
+                            src="./assets/icon/logo.png"
+                            alt=""
+                            class="sidebar__logo-img"
+                        />
+                        <h1 class="sidebar__logo-title">Nhi's Music</h1>
+                    </a>
+                    <!-- Navbar -->
+                    <nav id="navbar" class="navbar">
+                        <div class="navbar-menu">
+                            <h3 class="navbar__title">Library</h3>
+                            <ul class="navbar__list">
+                                <li>
+                                    <a
+                                        href="#!"
+                                        class="navbar__item-tab active"
+                                    >
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/fire.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Trends
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/user-square.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Artists
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/playlist.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Albums
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/disc.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Songs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-menu">
+                            <h3 class="navbar__title">Discover</h3>
+                            <ul class="navbar__list">
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/store.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Store
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/heart.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Like
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/radio.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Radio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="navbar__item-tab">
+                                        <span class="navbar__item-icon">
+                                            <img
+                                                src="./assets/icon/list.svg"
+                                                alt=""
+                                            />
+                                        </span>
+                                        Browse
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+            </div>
+
+            <div class="col-7 col-md-6 col-sm-7 offset-md-1 offset-sm-0">
+                <div class="main">
+                    <div class="main__container">
+                        <div class="form__search">
+                            <input
+                                type="text"
+                                id=""
+                                placeholder="Enter keywords to search"
+                                class="form__search-input"
+                            />
+                            <div class="form__search-wrap">
+                                <button class="form__search-wrap-btn">
+                                    <img
+                                        src="./assets/icon/search.svg"
+                                        alt=""
+                                        class="form_seach-wrap-icon"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide__row">
+                                <div class="slide__row-left">
+                                    <h2 class="slide__title">Trending</h2>
+                                    <img
+                                        src="./assets/icon/fire.svg"
+                                        alt=""
+                                        style="
+                                            filter: brightness(0) saturate(100%)
+                                                invert(59%) sepia(99%)
+                                                saturate(3931%)
+                                                hue-rotate(318deg)
+                                                brightness(95%) contrast(111%);
+                                        "
+                                    />
+                                </div>
+                                <a href="#!" class="slide__view">View All</a>
+                            </div>
+                            <div class="slide__content">
+                                <div class="slide__content-wrap">
+                                    <img
+                                        src="./assets/slide/slide-1.png"
+                                        alt=""
+                                        class="slide__content-img"
+                                    />
+                                </div>
+                                <div class="slide__control">
+                                    <img
+                                        src=""
+                                        alt=""
+                                        class="slide__control-icon"
+                                    />
+                                    <img
+                                        src=""
+                                        alt=""
+                                        class="slide__control-icon"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist">
+                            <div class="slide__row">
+                                <div class="slide__row-left">
+                                    <h2 class="slide__title">Top Artists</h2>
+                                    <img
+                                        src="./assets/icon/user-square.svg"
+                                        alt=""
+                                        style="
+                                            filter: brightness(0) saturate(100%)
+                                                invert(59%) sepia(99%)
+                                                saturate(3931%)
+                                                hue-rotate(318deg)
+                                                brightness(95%) contrast(111%);
+                                        "
+                                    />
+                                </div>
+                                <a href="#!" class="slide__view">View All</a>
+                            </div>
+
+                            <div
+                                class="row row-cols-4 row-cols-md-2 gx-2 gx-lg-1 gy-md-2"
+                            >
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #e33e9f"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-1.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Travis Scott
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            23M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #4d25ae"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-2.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Billie Ellish
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            100M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #fe476e"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-3.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            This Kid
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            14M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #ffa1b5"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-4.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Bloody Eyes
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            125M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="artist__title">Chill</h3>
+                            <div
+                                class="row row-cols-4 row-cols-md-2 gx-2 gx-lg-1"
+                            >
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #141163"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-5.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Lofi Chill
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            23M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #800080"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-6.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Nhạc Hoa
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            100M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #008080"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-7.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Acoustic
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            14M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #800000"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-8.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Pop Ballad
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            125M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="artist__title">Indie - R&B</h3>
+                            <div
+                                class="row row-cols-4 row-cols-md-2 gx-2 gx-lg-1"
+                            >
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #621c62"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-9.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Dance Alone
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            223M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #730c60"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-10.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Flowers
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            60M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #153213"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-11.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Painting
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            142M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div
+                                        class="artist__item"
+                                        style="background-color: #8e331c"
+                                    >
+                                        <img
+                                            src="./assets/artist/artist-12.png"
+                                            alt=""
+                                            class="artist__item-img"
+                                        />
+                                        <h4 class="artist__item-title">
+                                            Who I Am
+                                        </h4>
+                                        <p class="artist__item-description">
+                                            150M Plays
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 col-xl-4 col-sm-5">
+                <div class="right-bar">
+                    <div class="user">
+                        <div class="user__fixed">
+                            <!-- User -->
+                            <div class="user__group">
+                                <div class="user__action">
+                                    <div class="user__wrap d-md-none">
+                                        <img
+                                            src="./assets/icon/light-mode.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="user__wrap">
+                                        <img
+                                            src="./assets/icon/ring.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div class="user__info">
+                                    <img
+                                        src="./assets/avatar/avatar.png"
+                                        alt=""
+                                        class="user__info-avatar"
+                                    />
+                                    <p class="user__info-name">Nhi iu</p>
+                                </div>
+                            </div>
+
+                            <div class="user__playing">
+                                <h2 class="user__playing-title">
+                                    Currently Playing
+                                </h2>
+                                <img src="./assets/icon/playing.svg" alt="" />
+                            </div>
+                            <!-- Dashboard -->
+                            <div class="dashboard">
+                                <h2 class="dashboard__title"></h2>
+                                <p class="dashboard__subtitle"></p>
+                                <!-- CD -->
+                                <div class="cd">
+                                    <div class="waves">
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                    </div>
+                                    <div class="waves">
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                        <span class="wave paused"></span>
+                                    </div>
+                                    <div
+                                        class="cd-thumb"
+                                        style="background-image: url()"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Playlist -->
+                        <div class="playlist">
+                            <div class="playlist__song">
+                                <div
+                                    class="playlist__thumb"
+                                    style="background-image: url()"
+                                ></div>
+                                <div class="playlist__body">
+                                    <h3 class="playlist__title"></h3>
+                                    <p class="playlist__author"></p>
+                                </div>
+                                <div class="playlist__option">
+                                    <i class="fas fa-ellipsis"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1">
+            <div class="col">
+                <div class="control">
+                    <div class="control__play">
+                        <div class="btn btn-prev">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </div>
+                        <div class="btn btn-toggle-play">
+                            <i class="fa-solid fa-pause icon-pause"></i>
+                            <i class="fa-solid fa-play icon-play"></i>
+                        </div>
+                        <div class="btn btn-next">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </div>
+                    </div>
+                    <div class="btn btn-repeat">
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="btn btn-random">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                    <div class="btn btn-face d-sm-none">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div class="control__progress">
+                        <span class="time--current"></span>
+                        <input
+                            id="progress"
+                            class="progress"
+                            type="range"
+                            value="0"
+                            step="1"
+                            min="0"
+                            max="100"
+                        />
+                        <span class="time--total"></span>
+                    </div>
+                    <audio id="audio" src=""></audio>
+
+                    <div class="btn btn-volume">
+                        <i class="icon-mute fa-solid fa-volume-xmark"></i>
+                        <i class="icon-unmute fa-solid fa-volume-high"></i>
+                        <input
+                            type="range"
+                            id="volume-bar"
+                            class="volume-bar"
+                            value="1"
+                            step="0.1"
+                            min="0"
+                            max="1"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/main.js"></script>
+    </body>
+</html>

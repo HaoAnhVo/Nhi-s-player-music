@@ -1,0 +1,60 @@
+@use "../abstracts";
+
+.slide {
+    margin-top: 40px;
+}
+
+.slide__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.slide__row-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.slide__title,
+.artist__title {
+    font-size: 1.8rem;
+    font-weight: 760;
+    line-height: 140%;
+    color: var(--text-color);
+
+    @include abstracts.screen(lg) {
+        font-size: 1.5rem;
+    }
+}
+
+.slide__view {
+    font-size: 1.5rem;
+    line-height: 140%;
+    color: var(--control-color);
+
+    @include abstracts.screen(lg) {
+        font-size: 1.4rem;
+    }
+}
+
+.slide__content {
+    display: flex;
+}
+
+.slide__content-wrap {
+    width: 100%;
+    position: relative;
+    padding-top: 50%;
+}
+
+.slide__content-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+}

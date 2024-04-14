@@ -1,0 +1,127 @@
+@use "../abstracts";
+
+.right-bar {
+    width: 100%;
+    padding-bottom: 70px;
+    background: linear-gradient(360deg, #420d2b 0%, #0f0d20 100%);
+
+    @include abstracts.screen(lg) {
+        padding-bottom: 60px;
+    }
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user__group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+
+    @include abstracts.screen(sm) {
+        padding: 20px 20px 0 20px;
+    }
+}
+
+.user__action {
+    display: flex;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        gap: 8px;
+    }
+}
+
+.user__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #4d25ae80 0%, #e33e9f80 100%);
+    cursor: pointer;
+}
+
+.user__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #e33e9f80 0%, #4d25ae80 100%);
+
+    @include abstracts.screen(md) {
+        padding: 8px;
+        gap: 4px;
+    }
+}
+
+.user__info-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user__info-name {
+    font-size: 1.4rem;
+    color: var(--text-color);
+
+    @include abstracts.screen(md) {
+        font-size: 1.2rem;
+    }
+}
+
+.user__fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    background: #0f0d20;
+    z-index: 2;
+    padding: 20px 40px;
+    box-shadow: 2px 0px 9px 2px #4a1a55;
+
+    @include abstracts.screen(xl) {
+        padding: 20px 30px;
+    }
+
+    @include abstracts.screen(xl) {
+        width: 33.3%;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 41.5%;
+        padding: 0;
+    }
+}
+
+.user__playing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0 14px;
+
+    @include abstracts.screen(lg) {
+        margin: 14px 0 12px;
+    }
+}
+
+.user__playing-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+
+    @include abstracts.screen(lg) {
+        font-size: 1.6rem;
+    }
+
+    @include abstracts.screen(md) {
+        font-size: 1.2rem;
+    }
+}

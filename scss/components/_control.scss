@@ -1,0 +1,230 @@
+@use "../abstracts";
+
+/* Control */
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 40px 10px 73px;
+    width: 100%;
+    border: 1px solid #4d25ae;
+    background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(77, 37, 174, 0.5) 0%,
+            rgba(227, 62, 159, 0.5) 100%
+        );
+    backdrop-filter: blur(50px);
+    z-index: 100;
+
+    @include abstracts.screen(lg) {
+        padding: 10px 20px 10px 30px;
+    }
+
+    @include abstracts.screen(sm) {
+        padding: 10px 6px;
+    }
+}
+
+.control .btn {
+    font-size: 2rem;
+    color: #938798;
+    cursor: pointer;
+
+    @include abstracts.screen(lg) {
+        font-size: 1.8rem;
+    }
+
+    @include abstracts.screen(md) {
+        font-size: 1.4rem;
+    }
+}
+
+.control .btn.active {
+    color: var(--control-color);
+}
+
+.control .btn:hover {
+    color: var(--control-color);
+}
+
+.control .btn.bg {
+    color: var(--text-color);
+}
+
+.control__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @include abstracts.screen(xl) {
+        gap: 25px;
+    }
+
+    @include abstracts.screen(lg) {
+        gap: 20px;
+    }
+
+    @include abstracts.screen(md) {
+        gap: 15px;
+    }
+
+    @include abstracts.screen(sm) {
+        gap: 10px;
+    }
+}
+
+.btn-toggle-play .icon-pause {
+    display: none;
+}
+
+.control.playing .icon-pause {
+    display: inline-block;
+}
+
+.control.playing .icon-play {
+    display: none;
+}
+
+.btn-toggle-play {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    color: var(--text-color) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--control-color);
+
+    @include abstracts.screen(lg) {
+        width: 36px;
+        height: 36px;
+    }
+
+    @include abstracts.screen(md) {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Progress */
+
+.control__progress {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    @include abstracts.screen(md) {
+        gap: 4px;
+    }
+}
+
+.progress {
+    width: 457px;
+    height: 8px;
+    appearance: none;
+    background: #d9d9d9;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    border-radius: 99px;
+    cursor: pointer;
+
+    @include abstracts.screen(xl) {
+        height: 6px;
+        width: 350px;
+    }
+
+    @include abstracts.screen(lg) {
+        width: 240px;
+    }
+
+    @include abstracts.screen(md) {
+        width: 170px;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 100px;
+    }
+}
+
+.time--current,
+.time--total {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 140%;
+
+    @include abstracts.screen(md) {
+        font-size: 1rem;
+    }
+}
+
+/* Volume */
+
+.control .btn-volume {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+    @include abstracts.screen(lg) {
+        gap: 10px;
+    }
+
+    @include abstracts.screen(sm) {
+        gap: 4px;
+    }
+}
+
+.btn-volume .icon-mute + .icon-unmute {
+    position: absolute;
+}
+
+.btn-volume .icon-mute {
+    visibility: hidden;
+}
+
+.btn-volume:hover .volume-bar {
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.volume-bar {
+    appearance: none;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    width: 160px;
+    height: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    @include abstracts.screen(xl) {
+        height: 6px;
+        width: 100px;
+    }
+
+    @include abstracts.screen(md) {
+        width: 80px;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 50px;
+    }
+}
+
+.volume-bar::-webkit-slider-thumb,
+.progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--control-color);
+}

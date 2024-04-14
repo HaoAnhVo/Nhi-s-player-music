@@ -1,0 +1,120 @@
+@use "../abstracts";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding: 44px;
+    background: #21102a;
+    border-right: 1px solid #e33e9f;
+
+    @include abstracts.screen(xl) {
+        padding: 44px 20px;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 44px 10px;
+    }
+}
+
+.sidebar__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sidebar__logo-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 140%;
+    color: #e3e8f0;
+
+    @include abstracts.screen(lg) {
+        font-size: 1.6rem;
+    }
+}
+
+.sidebar__logo-img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-menu {
+    margin-top: 43px;
+}
+
+.navbar__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--text-color);
+
+    @include abstracts.screen(lg) {
+        font-size: 1.5rem;
+    }
+}
+
+.navbar__list {
+    margin-top: 24px;
+}
+
+.navbar__item-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 6px;
+    font-size: 1.6rem;
+    line-height: 140%;
+    border-radius: 12px;
+    transition: background-color 0.2s;
+    color: var(--text-color);
+
+    @include abstracts.screen(lg) {
+        font-size: 1.3rem;
+        height: 36px;
+    }
+}
+
+.navbar__item-icon {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item-tab:not(.navbar__item-tab.active):hover {
+    background-color: #3d1744;
+    color: var(--text-color);
+    border: 1px solid #e33e9f;
+}
+
+.navbar__item-tab.active .navbar__item-icon {
+    filter: var(--icon-color);
+}
+
+.navbar__item-tab.active .navbar__item-icon {
+    width: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__item-tab.active {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    @include abstracts.screen(lg) {
+        font-size: 1.4rem;
+    }
+}
+
+.aside__more-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+        hue-rotate(61deg) brightness(114%) contrast(113%);
+    z-index: 100;
+}
