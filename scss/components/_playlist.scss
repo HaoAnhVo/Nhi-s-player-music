@@ -9,17 +9,12 @@
         margin-top: 400px;
     }
 
-    @include abstracts.screen(xl) {
-        margin-top: 410px;
-        padding: 0 20px;
-    }
-
     @include abstracts.screen(lg) {
-        margin-top: 400px;
+        padding: 0 25px;
     }
 
     @include abstracts.screen(md) {
-        margin-top: 330px;
+        margin-top: 360px;
         padding: 0;
     }
 
@@ -69,9 +64,15 @@
         margin: 0 10px;
     }
 
+    @include abstracts.screen(lg) {
+        width: 38px;
+        height: 38px;
+    }
+
     @include abstracts.screen(sm) {
         width: 30px;
         height: 30px;
+        margin: 0 5px;
     }
 }
 
@@ -90,12 +91,12 @@
     font-weight: 590;
     color: var(--text-color);
 
-    @include abstracts.screen(xxl) {
-        font-size: 1.6rem;
+    @include abstracts.screen(lg) {
+        font-size: 1.4rem;
     }
 
     @include abstracts.screen(md) {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -109,6 +110,10 @@
     @include abstracts.screen(xl) {
         font-size: 1.2rem;
     }
+
+    @include abstracts.screen(lg) {
+        font-size: 1rem;
+    }
 }
 
 .playlist__option {
@@ -120,6 +125,10 @@
     color: var(--text-color);
     font-size: 1.8rem;
     transition: all ease 0.3s;
+
+    @include abstracts.screen(sm) {
+        padding: 16px 0;
+    }
 }
 
 .playlist__option:hover {

@@ -45,6 +45,10 @@
     @include abstracts.screen(md) {
         font-size: 1.4rem;
     }
+
+    @include abstracts.screen(sm) {
+        font-size: 1.1rem;
+    }
 }
 
 .control .btn.active {
@@ -152,7 +156,7 @@
     }
 
     @include abstracts.screen(sm) {
-        width: 100px;
+        width: 90px;
     }
 }
 

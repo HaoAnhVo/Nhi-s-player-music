@@ -17,6 +17,10 @@
     @include abstracts.screen(md) {
         padding-left: 35px;
     }
+
+    @include abstracts.screen(sm) {
+        padding-left: 75px;
+    }
 }
 
 .form__search-input {
@@ -35,7 +39,7 @@
 
     &::placeholder {
         @include abstracts.screen(sm) {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
 }
@@ -64,7 +68,7 @@
     }
 
     @include abstracts.screen(sm) {
-        padding-right: 60px;
+        padding-right: 150px;
     }
 }
 

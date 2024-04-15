@@ -63,6 +63,10 @@
         padding: 8px;
         gap: 4px;
     }
+
+    @include abstracts.screen(sm) {
+        padding: 6px;
+    }
 }
 
 .user__info-avatar {
@@ -104,6 +108,10 @@
         width: 33.4%;
     }
 
+    @include abstracts.screen(xl) {
+        padding: 20px;
+    }
+
     @include abstracts.screen(sm) {
         width: 41.8%;
         padding: 0;
@@ -113,7 +121,7 @@
 .user__playing {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
     margin: 16px 0 14px;
 
     @include abstracts.screen(lg) {

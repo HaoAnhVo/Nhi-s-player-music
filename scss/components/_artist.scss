@@ -2,6 +2,14 @@
 
 .artist {
     margin-top: 64px;
+
+    @include abstracts.screen(md) {
+        margin-top: 50px;
+    }
+
+    @include abstracts.screen(sm) {
+        margin-top: 40px;
+    }
 }
 
 .artist__title {
@@ -21,6 +29,10 @@
 
     @include abstracts.screen(lg) {
         padding: 15px 0;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 10px 0;
     }
 }
 
@@ -47,6 +59,11 @@
     @include abstracts.screen(lg) {
         font-size: 1.2rem;
     }
+
+    @include abstracts.screen(sm) {
+        font-size: 1rem;
+        margin: 10px 0 4px;
+    }
 }
 
 .artist__item-description {
@@ -54,4 +71,8 @@
     line-height: 140%;
     color: var(--text-color);
     opacity: 0.7;
+
+    @include abstracts.screen(sm) {
+        font-size: 0.8rem;
+    }
 }
