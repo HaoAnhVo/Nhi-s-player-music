@@ -134,6 +134,10 @@
 .progress {
     width: 457px;
     height: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
     background: #d9d9d9;
     outline: none;
@@ -203,6 +207,10 @@
 }
 
 .volume-bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
     width: 160px;
@@ -226,6 +234,10 @@
 
 .volume-bar::-webkit-slider-thumb,
 .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
