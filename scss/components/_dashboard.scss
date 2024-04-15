@@ -84,26 +84,11 @@
 }
 
 .waves {
-    position: absolute;
-    top: 292px;
-    right: 40px;
-    height: 30px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-
-    @include abstracts.screen(xl) {
-        width: 10px !important;
-    }
-}
-
-.waves + .waves {
-    right: 255px;
-
-    @include abstracts.screen(xl) {
-        right: 210px !important;
-    }
 }
 
 .wave {

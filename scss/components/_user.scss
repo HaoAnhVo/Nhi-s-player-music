@@ -8,6 +8,10 @@
     @include abstracts.screen(lg) {
         padding-bottom: 60px;
     }
+
+    &.bg {
+        background: linear-gradient(360deg, #f1857f 0%, #90069a 100%);
+    }
 }
 
 .user {
@@ -51,7 +55,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 12px;
+    padding: 9px;
     border-radius: 16px;
     background: linear-gradient(180deg, #e33e9f80 0%, #4d25ae80 100%);
 
@@ -85,18 +89,23 @@
     background: #0f0d20;
     z-index: 2;
     padding: 20px 40px;
-    box-shadow: 2px 0px 9px 2px #4a1a55;
+    box-shadow: 4px 0px 9px 2px #4a1a55;
+
+    &.bg {
+        background: linear-gradient(360deg, #ff5fdf 0%, #f1857f 100%);
+        box-shadow: 4px 0px 9px 2px #f1857f;
+    }
 
     @include abstracts.screen(xl) {
         padding: 20px 30px;
     }
 
     @include abstracts.screen(xl) {
-        width: 33.3%;
+        width: 33.4%;
     }
 
     @include abstracts.screen(sm) {
-        width: 41.5%;
+        width: 41.8%;
         padding: 0;
     }
 }
@@ -104,7 +113,7 @@
 .user__playing {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
     margin: 16px 0 14px;
 
     @include abstracts.screen(lg) {
@@ -119,6 +128,7 @@
 
     @include abstracts.screen(lg) {
         font-size: 1.6rem;
+        margin: 14px 0 12px;
     }
 
     @include abstracts.screen(md) {

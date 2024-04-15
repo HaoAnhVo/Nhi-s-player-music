@@ -1685,6 +1685,9 @@ strong {
     padding-bottom: 60px;
   }
 }
+.right-bar.bg {
+  background: linear-gradient(360deg, #f1857f 0%, #90069a 100%);
+}
 
 .user {
   display: flex;
@@ -1729,7 +1732,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px;
+  padding: 9px;
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(227, 62, 159, 0.5019607843) 0%, rgba(77, 37, 174, 0.5019607843) 100%);
 }
@@ -1765,7 +1768,11 @@ strong {
   background: #0f0d20;
   z-index: 2;
   padding: 20px 40px;
-  box-shadow: 2px 0px 9px 2px #4a1a55;
+  box-shadow: 4px 0px 9px 2px #4a1a55;
+}
+.user__fixed.bg {
+  background: linear-gradient(360deg, #ff5fdf 0%, #f1857f 100%);
+  box-shadow: 4px 0px 9px 2px #f1857f;
 }
 @media (max-width: 1199.98px) {
   .user__fixed {
@@ -1774,12 +1781,12 @@ strong {
 }
 @media (max-width: 1199.98px) {
   .user__fixed {
-    width: 33.3%;
+    width: 33.4%;
   }
 }
 @media (max-width: 575.98px) {
   .user__fixed {
-    width: 41.5%;
+    width: 41.8%;
     padding: 0;
   }
 }
@@ -1787,7 +1794,7 @@ strong {
 .user__playing {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   margin: 16px 0 14px;
 }
 @media (max-width: 991.98px) {
@@ -1804,6 +1811,7 @@ strong {
 @media (max-width: 991.98px) {
   .user__playing-title {
     font-size: 1.6rem;
+    margin: 14px 0 12px;
   }
 }
 @media (max-width: 767.98px) {
@@ -1900,28 +1908,11 @@ strong {
   }
 }
 .waves {
-  position: absolute;
-  top: 292px;
-  right: 40px;
-  height: 30px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-}
-@media (max-width: 1199.98px) {
-  .waves {
-    width: 10px !important;
-  }
-}
-
-.waves + .waves {
-  right: 255px;
-}
-@media (max-width: 1199.98px) {
-  .waves + .waves {
-    right: 210px !important;
-  }
 }
 
 .wave {
@@ -1968,6 +1959,11 @@ strong {
   margin-top: 420px;
   padding: 0 40px;
 }
+@media (max-width: 1399.98px) {
+  .playlist {
+    margin-top: 400px;
+  }
+}
 @media (max-width: 1199.98px) {
   .playlist {
     margin-top: 410px;
@@ -2011,6 +2007,7 @@ strong {
 @media (max-width: 575.98px) {
   .playlist__song {
     padding: 8px 10px 8px 0;
+    border-radius: 0;
   }
 }
 
@@ -2058,7 +2055,7 @@ strong {
 }
 @media (max-width: 1399.98px) {
   .playlist__title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -2074,7 +2071,7 @@ strong {
   margin-top: 8px;
   opacity: 0.5;
 }
-@media (max-width: 1399.98px) {
+@media (max-width: 1199.98px) {
   .playlist__author {
     font-size: 1.2rem;
   }
@@ -2161,7 +2158,7 @@ strong {
 .control {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
   padding: 10px 40px 10px 73px;

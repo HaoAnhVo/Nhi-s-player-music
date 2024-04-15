@@ -5,6 +5,10 @@
     margin-top: 420px;
     padding: 0 40px;
 
+    @include abstracts.screen(xxl) {
+        margin-top: 400px;
+    }
+
     @include abstracts.screen(xl) {
         margin-top: 410px;
         padding: 0 20px;
@@ -42,6 +46,7 @@
 
     @include abstracts.screen(sm) {
         padding: 8px 10px 8px 0;
+        border-radius: 0;
     }
 }
 
@@ -86,7 +91,7 @@
     color: var(--text-color);
 
     @include abstracts.screen(xxl) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     @include abstracts.screen(md) {
@@ -101,7 +106,7 @@
     margin-top: 8px;
     opacity: 0.5;
 
-    @include abstracts.screen(xxl) {
+    @include abstracts.screen(xl) {
         font-size: 1.2rem;
     }
 }

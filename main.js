@@ -24,7 +24,8 @@ const volBar = $(".volume-bar");
 const iconMute = $(".icon-mute");
 const iconUnmute = $(".icon-unmute");
 const faceBtn = $(".btn-face");
-const bgColor = $(".dashboard");
+const bgColor = $("body");
+
 const wave = $$(".wave");
 
 const app = {
@@ -213,7 +214,7 @@ const app = {
             controlBtn.classList.add("playing");
             cdThumbAnimate.play();
             wave.forEach((element) => {
-                element.style.width = "6px";
+                element.style.width = "3px";
                 element.classList.remove("paused");
             });
         };
@@ -422,19 +423,28 @@ const app = {
 
         //Background-Theme
         faceBtn.onclick = function () {
-            const songs = $$(".song");
+            const songs = $$(".playlist__song");
+            const listColor = $(".right-bar");
+            const userFixedColor = $(".user__fixed");
+            const bgMain = $(".main");
+
             _this.isFace = !_this.isFace;
             if (_this.isFace) {
-                bgColor.classList.add("bg");
+                bgColor.style.background =
+                    "linear-gradient(360deg, #ff5fdf 0%, #f1857f 100%)";
+                bgMain.style.background =
+                    "linear-gradient(360deg, #ff5fdf 0%, #f1857f 100%)";
+                listColor.classList.add("bg");
+                userFixedColor.classList.add("bg");
                 songs.forEach(function (song) {
-                    song.classList.add("bg");
-                    song.querySelector("h3").style.color =
-                        "rgba(255,255,255,255";
+                    song.querySelector("h3").style.color = "#22bf9c";
                 });
             } else {
-                bgColor.classList.remove("bg");
+                bgColor.style.background = "";
+                bgMain.style.background = "";
+                listColor.classList.remove("bg");
+                userFixedColor.classList.remove("bg");
                 songs.forEach(function (song) {
-                    song.classList.remove("bg");
                     song.querySelector("h3").style.color = "";
                 });
             }
